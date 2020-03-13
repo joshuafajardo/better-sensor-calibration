@@ -1,3 +1,7 @@
+/*  This 
+ *  
+ */ 
+
 #include <Wire.h>
 #include "SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.h"
 
@@ -18,7 +22,7 @@ void setup()
 
   if (myScale.begin() == false)
   {
-    Serial.println("Scale not detected. Please check wiring. Freezing...");
+    Serial.println("Scale not detectedp. Please check wiring. Freezing...");
     while (1);
   }
   myScale.setSampleRate(NAU7802_SPS_320);
@@ -26,7 +30,7 @@ void setup()
   Serial.println("When the readings pause, remove current weight and enter a new weight.");
   Serial.println("Report weight in grams.");
   Serial.println("Measurements Per Weight: " + String(MEASUREMENTS_PER_WEIGHT));
-  Serial.println("Press any key to continue.");
+  Serial.println("Press any key to begin.");
   while(Serial.available() == 0) delay(10);
   Serial.readStringUntil("\n");
 }
